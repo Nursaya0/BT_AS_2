@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Model Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            background: #007BFF;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .models {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .model {
+            padding: 15px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .model button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Model Marketplace</h1>
+        <p id="connectedAddress">Connected Address: <span id="address">Not Connected</span></p>
+        
+        <h2>List a New Model</h2>
+        <div class="form-group">
+            <label for="modelName">Model Name</label>
+            <input type="text" id="modelName" placeholder="Enter model name">
+        </div>
+        <div class="form-group">
+            <label for="modelDescription">Description</label>
+            <input type="text" id="modelDescription" placeholder="Enter model description">
+        </div>
+        <div class="form-group">
+            <label for="modelPrice">Price (ETH)</label>
+            <input type="number" id="modelPrice" placeholder="Enter price in ETH">
+        </div>
+        <button id="listModelBtn">List Model</button>
+
+        <h2>Available Models</h2>
+        <div class="models" id="models">
+            <!-- Models will be dynamically loaded here -->
+        </div>
+
+        <h2>Creator Functions</h2>
+        <button id="withdrawFundsBtn">Withdraw Funds</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
