@@ -1,4 +1,4 @@
-let web3;
+let web3;//hh
 let contract;
 const contractAddress = '0xD284EEA021E4601b881AD452d2Aff229DeE971be'; // Укажите адрес вашего контракта
 const contractABI = [
